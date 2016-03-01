@@ -34,4 +34,4 @@ git feeling [options] <message>
 * `-s or --sad` - adds a :tired_face:
 * `-w or --win` - adds a :beer:
 * `-a or --angry` - adds a :rage:
-* `-m or --money` - adds a :money:
+* `-m or --money` - adds a :moneybag:
