@@ -37,6 +37,9 @@ while [ $# -gt 0 ]; do
         -h|--happy)
             happy $2
             exit 0;;
+        -s|--sad)
+            tired $2
+            exit 0;;
         -w|--win)
             win $2
             exit 0;;
