@@ -43,7 +43,7 @@ if [ $# -le 0 ]; then
     exit 0
 fi
 
-while [ $# -gt 0 ]; do
+while [ $# -gt 1 ]; do
     case $1 in
         --usage)
             usage 
@@ -67,5 +67,5 @@ while [ $# -gt 0 ]; do
             usage
             exit 0;;
     esac
-    shift 1
+    shift 2
 done
