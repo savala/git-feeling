@@ -43,7 +43,7 @@ while [ $# -gt 0 ]; do
         -a|--angry)
             angry $2
             exit 0;;
-        -y|--yee)
+        -m|--money)
             money $2
             exit 0;;
         *)
