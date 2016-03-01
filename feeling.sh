@@ -1,7 +1,15 @@
 #!/usr/bin/env bash
 
 usage() {
-    (echo "git-feeling - Add some emotion to your commit messages!") 1>&2
+    (echo "git-feeling - Add some emotion to your commit messages!"
+     echo "Usage: git feeling [options] <msg>"
+     echo "[options]"
+     echo " -h or --happy"
+     echo " -s or --sad"
+     echo " -w or --win"
+     echo " -a or --angry"
+     echo " -m or --money"
+     echo " --usage") 1>&2
 }
 
 happy() {
@@ -28,6 +36,12 @@ win() {
     message=":beer: $1"
     git commit -m "${message}"
 }
+
+if [ $# -le 0 ]; then
+    echo "Incorrect arguments \n"
+    usage
+    exit 0
+fi
 
 while [ $# -gt 0 ]; do
     case $1 in
