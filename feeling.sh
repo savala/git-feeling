@@ -13,27 +13,27 @@ usage() {
 }
 
 happy() {
-    message=":smiley: $1"
+    message=":smiley: ${1}"
     git commit -m "${message}"
 }
 
 angry() {
-    message=":rage: $1"
+    message=":rage: ${1}"
     git commit -m "${message}"
 }
 
 tired() {
-    message=":tired_face: $1"
+    message=":tired_face: ${1}"
     git commit -m "${message}"
 }
 
 money() {
-    message=":moneybag: $1"
+    message=":moneybag: ${1}"
     git commit -m "${message}"
 }
 
 win() {
-    message=":beer: $1"
+    message=":beer: ${1}"
     git commit -m "${message}"
 }
 
@@ -49,19 +49,19 @@ while [ $# -gt 1 ]; do
             usage 
             exit 0;;
         -h|--happy)
-            happy $2
+            happy "${2}"
             exit 0;;
         -s|--sad)
-            tired $2
+            tired "${2}"
             exit 0;;
         -w|--win)
-            win $2
+            win "${2}"
             exit 0;;
         -a|--angry)
-            angry $2
+            angry "${2}"
             exit 0;;
         -m|--money)
-            money $2
+            money "${2}"
             exit 0;;
         *)
             usage
