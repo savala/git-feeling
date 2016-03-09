@@ -23,157 +23,187 @@ usage() {
 }
 
 happy() {
-    message=":smiley: ${1}"
+    shift 1
+    message=":smiley: ${@}"
     git commit -m "${message}"
 }
 
 sad(){
-    message=":sob: ${1}"
+    shift 1
+    message=":sob: $@"
     git commit -m "${message}"
 }
 
 win() {
-    message=":beer: ${1}"
+    shift 1
+    message=":beer: $@"
     git commit -m "${message}"
 }
 
 angry() {
-    message=":rage: ${1}"
+    shift 1
+    message=":rage: $@"
     git commit -m "${message}"
 }
 
 money() {
-    message=":moneybag: ${1}"
+    message=":moneybag: $@"
     git commit -m "${message}"
 }
 
 smile() {
-    message=":smile: ${1}"
+    shift 1
+    message=":smile: $@"
     git commit -m "${message}"
 }
 
 tired() {
-    message=":tired_face: ${1}"
+    shift 1
+    message=":tired_face: $@"
     git commit -m "${message}"
 }
 
 laugh() {
-    message=":laughing: ${1}"
+    shift 1
+    message=":laughing: $@"
     git commit -m "${message}"
 }
 
 yum() {
-    message=":yum: ${1}"
+    shift 1
+    message=":yum: $@"
     git commit -m "${message}"
 }
 
 relaxed() {
-    message=":relaxed: ${1}"
+    shift 1
+    message=":relaxed: $@"
     git commit -m "${message}"
 }
 
 relieve() {
-    message=":relieve: ${1}"
+    shift 1
+    message=":relieve: $@"
     git commit -m "${message}"
 }
 
 wink() {
-    message=":wink: ${1}"
+    shift 1
+    message=":wink: $@"
     git commit -m "${message}"
 }
 
 stuckouttongue() {
-    message=":stuck_out_tongue: ${1}"
+    shift 1
+    message=":stuck_out_tongue: $@"
     git commit -m "${message}"
 }
 
 joy() {
-    message=":joy: ${1}"
+    shift 1
+    message=":joy: $@"
     git commit -m "${message}"
 }
 
 worry() {
-    message=":worried: ${1}"
+    shift 1
+    message=":worried: $@"
     git commit -m "${message}"
 }
 
 confused() {
-    message=":confused: ${1}"
+    shift 1
+    message=":confused: $@"
     git commit -m "${message}"
 }
 
 sweatsmile() {
-    message=":sweat_smile: ${1}"
+    shift 1
+    message=":sweat_smile: $@"
     git commit -m "${message}"
 }
 
 sweat() {
-    message=":sweat: ${1}"
+    shiftshift 1 1
+    message=":sweat: $@"
     git commit -m "${message}"
 }
 
 cry() {
-    message=":cry: ${1}"
+    shift 1
+    message=":cry: $@"
     git commit -m "${message}"
 }
 
 zzz() {
-    message=":zzz: ${1}"
+    shift 1
+    message=":zzz: $@"
     git commit -m "${message}"
 }
 
 scream() {
-    message=":scream: ${1}"
+    shift 1
+    message=":scream: $@"
     git commit -m "${message}"
 }
 
 sunglasses() {
-    message=":sunglasses: ${1}"
+    shift 1
+    message=":sunglasses: $@"
     git commit -m "${message}"
 }
 
 tired() {
-    message=":tired_face: ${1}"
+    shift 1
+    message=":tired_face: $@"
     git commit -m "${message}"
 }
 
 sleepy(){
-    message=":sleepy: ${1}"
+    shift 1
+    message=":sleepy: $@"
     git commit -m "${message}"
 }
 
 fire() {
-    message=":fire: ${1}"
+    shift 1
+    message=":fire: $@"
     git commit -m "${message}"
 }
 
 minus1() {
-    message=":-1: ${1}"
+    shift 1
+    message=":-1: $@"
     git commit -m "${message}"
 }
 
 plus1() {
-    message=":+1: ${1}"
+    shift 1
+    message=":+1: $@"
     git commit -m "${message}"
 }
 
 shit() {
-    message=":shit: ${1}"
+    shift 1
+    message=":shit: $@"
     git commit -m "${message}"
 }
 
 running() {
-    message=":runner: ${1}"
+    shift 1
+    message=":runner: $@"
     git commit -m "${message}"
 }
 
 troll() {
-    message=":trollface: ${1}"
+    shift 1
+    message=":trollface: $@"
     git commit -m "${message}"
 }
 
 skull() {
-    message=":skull: ${1}"
+    shift 1
+    message=":skull: $@"
     git commit -m "${message}"
 }
 
@@ -183,104 +213,103 @@ if [ $# -le 0 ]; then
     exit 0
 fi
 
-while [ $# -gt 0 ]; do
+while [ $# -gt 1 ]; do
     case $1 in
         --usage)
             usage 
             exit 0;;
         -h|--happy)
-            happy "${2}"
+            happy "$@"
             exit 0;;
         -s|--sad)
-            tired "${2}"
+            tired "$@"
             exit 0;;
         -w|--win)
-            win "${2}"
+            win "$@"
             exit 0;;
         -a|--angry)
-            angry "${2}"
+            angry "$@"
             exit 0;;
         -m|--money)
-            money "${2}"
+            money "$@"
             exit 0;;
         -sm|--smile)
-            smile "${2}"
+            smile "$@"
             exit 0;;
         -l|--laugh)
-            laugh "${2}"
+            laugh "$@"
             exit 0;;
         -y|--yum)
-            yum "${2}"
+            yum "$@"
             exit 0;;
         -rlx|--relax)
-            relax "${2}"
+            relax "$@"
             exit 0;;
         -rlv|--relieve)
-            relieve "${2}"
+            relieve "$@"
             exit 0;;
         -wnk|--wink)
-            wink "${2}"
+            wink "$@"
             exit 0;;
         -sot|--stuckouttongue)
-            stuckouttongue "${2}"
+            stuckouttongue "$@"
             exit 0;;
         -j|--joy)
-            joy "${2}"
+            joy "$@"
             exit 0;;
         -wry|--worry)
-            worry "${2}"
+            worry "$@"
             exit 0;;
         -cnf|--confused)
-            confused "${2}"
+            confused "$@"
             exit 0;;
         -ss|--sweatsmile)
-            sweatsmile "${2}"
+            sweatsmile "$@"
             exit 0;;
         -swt|--sweat)
-            sweat "${2}"
+            sweat "$@"
             exit 0;;
         -c|--cry)
-            cry "${2}"
+            cry "$@"
             exit 0;;
         -z|--zzz)
-            zzz "${2}"
+            zzz "$@"
             exit 0;;
         -scr|--scream)
-            scream "${2}"
+            scream "$@"
             exit 0;;
         -sg|--sunglasses)
-            sunglasses "${2}"
+            sunglasses "$@"
             exit 0;;
         -t|--tired)
-            tired "${2}"
+            tired "$@"
             exit 0;;
         -slp|--sleepy)
-            sleepy "${2}"
+            sleepy "$@"
             exit 0;;
         -f|--fire)
-            fire "${2}"
+            fire "$@"
             exit 0;;
         -1)
-            minus1 "${2}"
+            minus1 "$@"
             exit 0;;
         +1)
-            plus1 "${2}"
+            plus1 "$@"
             exit 0;;
         -sh|--shit)
-            shit "${2}"
+            shit "$@"
             exit 0;;
         -run|--running)
-            running "${2}"
+            running "$@"
             exit 0;;
         -tr|--troll)
-            troll "${2}"
+            troll "$@"
             exit 0;;
         -sk|--skull)
-            skull "${2}"
+            skull "$@"
             exit 0;;
         *)
             usage
             exit 0;;
     esac
-    shift 2
 done
