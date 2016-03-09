@@ -284,23 +284,3 @@ while [ $# -gt 0 ]; do
     esac
     shift 2
 done
-
-(echo "git-feeling - Add some emotion to your commit messages!"
-	echo "Usage: git feeling [option] <msg>"
-	echo "[optiokns]"
-	echo " -h or --happy        | -s or --sad"
-    echo " -w or --win          | -a or --angry"
-	echo " -m or --money        | -sm or --smile"
-	echo " -l or --laugh        | -y or --yum"
-	echo " -rlx or --relaxed    | -rlv or --releved"
-	echo " -wnk or --wink       | -sot or --stuckouttongue"
-    echo " -j or joy            | -wry or --worry"
-    echo " -cnf or --confused   | -ss or --sweatsmile"
-    echo " -swt or --sweat      | -c or --cry"
-    echo " -z or --zzz          | -scr or --scream"
-    echo " -sg or --sunglasses  | -t or --tired"
-    echo " -slp or --sleepy     | -f or --fire"
-    echo " -1                   | +1"
-    echo " -sh or --shit        | -run or --running"
-    echo " -tr or --troll       | -sk or --skull"
-    echo " --usage") 1>&2
