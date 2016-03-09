@@ -10,7 +10,7 @@ usage() {
 	echo " -l or --laugh        | -y or --yum"
 	echo " -rlx or --relaxed    | -rlv or --relieve"
 	echo " -wnk or --wink       | -sot or --stuckouttongue"
-    echo " -j or joy            | -wry or --worry"
+    echo " -j or --joy          | -wry or --worry"
     echo " -cnf or --confused   | -ss or --sweatsmile"
     echo " -swt or --sweat      |  -c or --cry"
     echo " -z or --zzz          | -scr or --scream"
@@ -243,7 +243,7 @@ while [ $# -gt 1 ]; do
             yum "$@"
             exit 0;;
         -rlx|--relax)
-            relax "$@"
+            relaxed "$@"
             exit 0;;
         -rlv|--relieve)
             relieve "$@"
