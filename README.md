@@ -1,7 +1,7 @@
 # git-feeling
 Let emojis show how you feel about your commits
 
-![Showcase](https://github.com/savala/git-feeling/blob/master/screenshots/screenshot.png)
+![Showcase](screenshots/screenshot.png)
 
 # Setup
 Clone the current repo
