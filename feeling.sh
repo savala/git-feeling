@@ -9,6 +9,7 @@ usage() {
      echo " -w or --win"
      echo " -a or --angry"
      echo " -m or --money"
+     echo " -z or --zap"
      echo " --usage") 1>&2
 }
 
@@ -37,6 +38,11 @@ win() {
     git commit -m "${message}"
 }
 
+zap() {
+    message= ":zap: ${1}"
+    git commit -m "${message}"
+}
+
 if [ $# -le 0 ]; then
     echo "Incorrect arguments \n"
     usage
@@ -62,6 +68,9 @@ while [ $# -gt 1 ]; do
             exit 0;;
         -m|--money)
             money "${2}"
+            exit 0;;
+        -z|--zap)
+            zap "${2}"
             exit 0;;
         *)
             usage
