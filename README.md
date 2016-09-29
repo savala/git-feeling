@@ -1,7 +1,7 @@
 # git-feeling
 Let emojis show how you feel about your commits
 
-![Showcase](https://github.com/savala/git-feeling/blob/master/screenshots/screenshot.png)
+![Showcase](screenshots/screenshot.png)
 
 # Setup
 Clone the current repo
@@ -35,3 +35,5 @@ git feeling [options] <message>
 * `-w or --win` - adds a :beer:
 * `-a or --angry` - adds a :rage:
 * `-m or --money` - adds a :moneybag:
+* `-z or --zap` - adds a :zap:
+* `-e or --emoji "EMOJI_NAME"` - allows adding any emoji you wish

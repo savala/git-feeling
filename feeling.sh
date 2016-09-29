@@ -9,32 +9,47 @@ usage() {
      echo " -w or --win"
      echo " -a or --angry"
      echo " -m or --money"
+     echo " -z or --zap"
      echo " --usage") 1>&2
+}
+
+commit() {
+    git commit -m "${1}"
 }
 
 happy() {
     message=":smiley: ${1}"
-    git commit -m "${message}"
+    commit "${message}"
 }
 
 angry() {
     message=":rage: ${1}"
-    git commit -m "${message}"
+    commit "${message}"
 }
 
 tired() {
     message=":tired_face: ${1}"
-    git commit -m "${message}"
+    commit "${message}"
 }
 
 money() {
     message=":moneybag: ${1}"
-    git commit -m "${message}"
+    commit "${message}"
 }
 
 win() {
     message=":beer: ${1}"
-    git commit -m "${message}"
+    commit "${message}"
+}
+
+zap() {
+    message=":zap: ${1}"
+    commit "${message}"
+}
+
+emoji() {
+    message=":${1}: ${2}"
+    commit "${message}"
 }
 
 if [ $# -le 0 ]; then
@@ -62,6 +77,12 @@ while [ $# -gt 1 ]; do
             exit 0;;
         -m|--money)
             money "${2}"
+            exit 0;;
+        -z|--zap)
+            zap "${2}"
+            exit 0;;
+        -e|--emoji)
+            emoji "${2}" "${3}"
             exit 0;;
         *)
             usage
