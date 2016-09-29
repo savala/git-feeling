@@ -36,3 +36,4 @@ git feeling [options] <message>
 * `-a or --angry` - adds a :rage:
 * `-m or --money` - adds a :moneybag:
 * `-z or --zap` - adds a :zap:
+* `-e or --emoji "EMOJI_NAME"` - allows adding any emoji you wish
